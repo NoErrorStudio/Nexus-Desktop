@@ -77,6 +77,7 @@ app.whenReady().then(() => {
     frame: false,
     alwaysOnTop: false,
     webPreferences: {
+      preload: path.join(__dirname, 'preloadSplash.js'),
       devTools: true
     },
     icon: icon

@@ -5,3 +5,4 @@ build-assets
 package-lock.json
 dist
 *.zip
+electron-builder.yml

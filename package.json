@@ -10,8 +10,9 @@
   "scripts": {
     "start": "electron .",
     "build": "cd build-assets/ && build-win.cmd",
-    "package": "electron-builder build",
-    "release": "electron-builder --publish onTag"
+    "publish": "cd build-assets/ && release-win.cmd",
+    "_package": "electron-builder build",
+    "_release": "electron-builder build --win --publish always"
   },
   "keywords": [
     "Electron",
@@ -46,7 +47,7 @@
       "static/",
       "LICENSE"
     ],
-    "forceCodeSigning": true,
+    "forceCodeSigning": false,
     "nsis": {
       "oneClick": false,
       "perMachine": false,
