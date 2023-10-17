@@ -12,7 +12,7 @@
     "build": "cd build-assets/ && build-win.cmd",
     "publish": "cd build-assets/ && release-win.cmd",
     "_package": "electron-builder build",
-    "_release": "electron-builder build --win --publish always"
+    "_release": "electron-builder --win -p always"
   },
   "keywords": [
     "Electron",
