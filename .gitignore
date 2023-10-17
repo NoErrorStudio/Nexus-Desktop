@@ -1,0 +1,7 @@
+node_modules
+.idea
+.env
+build-assets
+package-lock.json
+dist
+*.zip

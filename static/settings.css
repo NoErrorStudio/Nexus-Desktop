@@ -1,0 +1,161 @@
+html {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: lightgrey;
+}
+
+body {
+    padding-left: 0.5em;
+}
+
+.page {
+    position: relative;
+    top: 1em;
+    margin: 2.5em 0 0 1em;
+    padding: 0.5em;
+    display: grid;
+    grid-template-areas: 'options values';
+    gap: 10vw;
+    align-items: center;
+}
+
+.options {
+    grid-area: options;
+}
+
+.values {
+    grid-area: values;
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+.option {
+    padding: 0 0 1em 0;
+}
+
+#settingsCloseBtn {
+    position: absolute;
+    right: 7em;
+    top: 5em;
+    z-index: 999;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+    width: 3em; max-width: 3em;
+    height: 3em; max-height: 3em;
+    background: transparent url('../img/closeBtnLG.svg') no-repeat center;
+    background-size: 1.2em;
+    outline: 3px solid lightgrey;
+    color: lightgrey;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#settingsCloseBtn::after {
+    content: 'ESC';
+    position: absolute;
+    bottom: -2em;
+    left: 0.5em;
+}
+
+#settingsCloseBtn:hover {
+    outline: 3px solid white;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#settingsCloseBtn:active {
+    outline: 3px solid white;
+    color: white;
+    transform: translateY(2px);
+    transition: all 0.2s ease;
+}
+
+.page h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.page p {
+    font-size: 1em;
+    margin: 0.5em 1em;
+    color: grey;
+}
+
+
+
+#nexusServerUrl {
+    outline: none;
+    width: 20em;
+}
+
+#nexusServerUrlBtn {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: lightgrey;
+    border-radius: 15px;
+    height: 2em;
+    width: 4em;
+    cursor: pointer;
+}
+
+
+
+
+/* Switches */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./styles.css" rel="stylesheet">
+  <title>Nexus</title>
+</head>
+<body>
+<div class="titlebar">
+  <div class="titlebar-left">
+    <button id="menuBtn" class="titlebar-btn menuBtn"></button>
+    <div class="title">Nexus</div>
+  </div>
+  <div class="titlebar-right">
+    <div class="titlebar-btns">
+      <button id="minBtn" class="titlebar-btn minBtn"></button>
+      <button id="maxBtn" class="titlebar-btn maxBtn"></button>
+      <button id="closeBtn" class="titlebar-btn closeBtn"></button>
+    </div>
+  </div>
+</div>
+<!-- You can also require other files to run in this process -->
+<script src="../scripts/renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* styles.css */
+/* Add styles here to customize the appearance of your app */
+
+html {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+}
+
+.titlebar {
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 31px;
+    background: #222222; /* #222222 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titlebar .title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.titlebar .titlebar-btn {
+    width: 31px;
+    height: 31px;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    -webkit-app-region: none;
+}
+
+.titlebar .titlebar-btn:hover {
+    backdrop-filter: brightness(33%);
+}
+
+.titlebar-btns {
+    margin: 1px 0 1px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#minBtn {
+    background: url('../img/minBtn.svg') no-repeat center;
+    background-size: 16px;
+}
+
+#maxBtn {
+    background: url('../img/maxBtn.svg') no-repeat center;
+    background-size: 16px;
+}
+
+#closeBtn {
+    background: url('../img/closeBtn.svg') no-repeat center;
+    background-size: 16px;
+}
+
+#menuBtn {
+    background: url('../img/dotsmenu.svg') no-repeat center;
+    background-size: 6px;
+}
+
+.titlebar-left {
+    display: flex;
+    align-items: center;
+}
+
+

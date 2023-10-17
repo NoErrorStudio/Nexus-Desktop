@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./settings.css" rel="stylesheet">
+    <title>Nexus - Settings</title>
+</head>
+<body>
+<button id="settingsCloseBtn"></button>
+<h1 style="position:relative;top:1em;margin:0.25em;padding:0.25em;width:fit-content;max-width:10em;">App Settings</h1>
+<div class="page">
+    <div class="options">
+        <div class="option">
+            <h3>Hide app</h3>
+            <p>Hide the app in the system tray when clicking the close button.</p>
+        </div>
+        <div class="option">
+            <h3>Nexus Server</h3>
+            <p>The URL of the Nexus server you want to use.</p>
+        </div>
+    </div>
+    <div class="values">
+        <label class="switch">
+            <input id="switchHideApp" type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <label>
+            <input id="nexusServerUrl" type="url">
+            <button id="nexusServerUrlBtn">Save</button>
+        </label>
+    </div>
+</div>
+
+<!-- You can also require other files to run in this process -->
+<script src="../scripts/renderer.js"></script>
+</body>
+</html>

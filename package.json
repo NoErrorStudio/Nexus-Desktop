@@ -1,0 +1,80 @@
+{
+  "name": "nexus-desktop",
+  "productName": "Nexus",
+  "author": "jvherck <jvh.discord@gmail.com> (https://github.com/jvherck)",
+  "company": "NoError Studio",
+  "version": "1.3.0",
+  "description": "The desktop application for Nexus.",
+  "homepage": "https://noerror.studio",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "cd build-assets/ && build-win.cmd",
+    "package": "electron-builder build",
+    "release": "electron-builder --publish onTag"
+  },
+  "keywords": [
+    "Electron",
+    "chat",
+    "Nexus",
+    "app"
+  ],
+  "license": "MIT",
+  "copyright": "Copyright © 2023 jvherck (on GitHub)",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.4.0",
+    "electron-updater": "^6.1.1"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-store": "^8.1.0"
+  },
+  "repository": "https://github.com/NoErrorStudio/Nexus-Desktop",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "com.NoErrorStudio.NexusDesktop",
+    "productName": "Nexus",
+    "files": [
+      "!build-assets${/*}",
+      "build/",
+      "img/",
+      "scripts/",
+      "static/",
+      "LICENSE"
+    ],
+    "forceCodeSigning": true,
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "img/nexus-logo.ico",
+      "uninstallerIcon": "img/nexus-logo.ico",
+      "license": "LICENSE",
+      "artifactName": "${productName}_${version}_Setup.${ext}",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerSidebar": "img/NEXUS-black-side-banner.bmp",
+      "uninstallerSidebar": "img/NEXUS-black-side-banner.bmp"
+    },
+    "win": {
+      "publish": ["github"],
+      "icon": "img/nexus-logo.png",
+      "target": [
+        "nsis"
+      ],
+      "publisherName": "NoError Studio"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "os": [
+    "win32",
+    "!darwin",
+    "!linux"
+  ]
+}
